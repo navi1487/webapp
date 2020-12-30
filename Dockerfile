@@ -49,7 +49,7 @@ RUN cd /usr/src/app/webapp &&   mvn clean  package
 RUN mkdir /opt/tomcat/
 WORKDIR /opt/tomcat
 
-RUN curl -O https://www-eu.apache.org/dist/tomcat/tomcat/tomcat-8/v8.5.61/bin//apache-tomcat-8.5.61.tar.gz && \
+RUN curl -O  https://downloads.apache.org/tomcat/tomcat-8/v8.5.61/bin/apache-tomcat-8.5.61.tar.gz && \
  tar xvfz apache*.tar.gz && \
  mv apache-tomcat-8.5.40/* /opt/tomcat/. && \
  cp  /usr/src/app/webapp/target/WebApp.war /opt/tomcat/webapps
