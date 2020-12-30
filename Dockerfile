@@ -41,4 +41,4 @@ RUN git clone https://github.com/navi1487/webapp.git
 # Define default command, can be overriden by passing an argument when running the container
 
 # Maven assembly will package the project into a JAR FILE which can be executed
-RUN cd /usr/src/app &&  ls -lrt
+RUN cd /usr/src/app/webapp &&   mvn clean  package
