@@ -42,3 +42,20 @@ RUN git clone https://github.com/navi1487/webapp.git
 
 # Maven assembly will package the project into a JAR FILE which can be executed
 RUN cd /usr/src/app/webapp &&   mvn clean  package
+
+
+#Tomcat installation
+RUN mkdir /opt/tomcat/
+WORKDIR /opt/tomcat
+
+RUN curl -O https://www-eu.apache.org/dist/tomcat/tomcat/tomcat-8/v8.5.61/bin//apache-tomcat-8.5.61.tar.gz && \
+ tar xvfz apache*.tar.gz && \
+ mv apache-tomcat-8.5.40/* /opt/tomcat/. && \
+ cp  /usr/src/app/webapp/target/WebApp.war /opt/tomcat/webapps
+ 
+ EXPOSE 8080
+
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+
+
+
