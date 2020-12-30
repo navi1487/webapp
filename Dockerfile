@@ -51,7 +51,7 @@ WORKDIR /opt/tomcat
 
 RUN curl -O  https://downloads.apache.org/tomcat/tomcat-8/v8.5.61/bin/apache-tomcat-8.5.61.tar.gz && \
  tar xvfz apache*.tar.gz && \
- mv apache-tomcat-8.5.40/* /opt/tomcat/. && \
+ mv apache-tomcat-8.5.61/* /opt/tomcat/. && \
  cp  /usr/src/app/webapp/target/WebApp.war /opt/tomcat/webapps
  
  EXPOSE 8080
