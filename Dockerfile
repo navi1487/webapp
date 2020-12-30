@@ -18,7 +18,8 @@ RUN yum update -y && \
   yum update -y && \
   yum install -y curl && \
   yum install -y java-11-openjdk-devel  && \
-  yum install -y git && \
+  yum install -y git &&  \
+  yum install gzip &&  \
   yum clean all && \
    curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
   && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
